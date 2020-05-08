@@ -1,18 +1,19 @@
 <html>
-    <head>
+    <head >
         <meta name="author" content="Djordje Danicic 2017/0692">
+        <script src="../js/pocetna.js"></script>
     </head>
-    <body>
+    <body onload="loadMeni()">
         <table border = "0px" width = "100%">
             <tr>
                 <th align = "right" width = "50%"><font size = "10">Hotty</font></th>
-                <th align = "left" width = "25%"><img src = "slike/logo4.png" height = "100" width = "100" ></th> 
-                <th align = "right" width = "25%" valign = "top"> <button onclick="window.location.href = 'reg_uloguj_se.html';">Registruj/Uloguj Se</button></th>
+                <th align = "left" width = "25%"><img src = "../slike/logo4.png" height = "100" width = "100" ></th> 
+                <th align = "right" width = "25%" valign = "top" class="set_kor"></th>
             </tr>
             <tr>
                 <th width = "100%" colspan="3">
                     <button onclick="window.location.href = 'pocetna.html';">Pocetna</button>
-                    <button onclick="window.location.href = 'mojeNarudzbine.html';">Moje Narudzbine</button>
+                    <button onclick="MojeNarudz()">Moje Narudzbine</button>
                 </th>
             </tr>
             <tr>
@@ -24,7 +25,7 @@
         <table border="0px" width = "100%">
             <tr>
                 <th>
-                    <img src = "slike/marukoshi.jpg" width="200" height = "200">
+                    <img src = "../slike/marukoshi.jpg" width="200" height = "200">
                 </th>
                 <th align="left">
                     <h4>
@@ -62,7 +63,7 @@
                     <input type="radio" id="male" name="gender" value="male"><label for="male">4</label>
                     <input type="radio" id="female" name="gender" value="female"><label for="female">5</label>
                     &nbsp;
-                    <input type="submit" value="Oceni">
+                    <input type="submit" value="Oceni" onclick="oceniRestoran()">
                 </th>
             </tr>
             <tr>
@@ -76,7 +77,7 @@
                     <table>
                         <tr>
                             <th>
-                                <img src = "slike/miso_ramen.jpg" width="200" height = "150">
+                                <img src = "../slike/miso_ramen.jpg" width="200" height = "150">
                             </th>
                             <th align = "left">
                                 <ul>
@@ -85,7 +86,7 @@
                                     <li>Vrsta Jela: Supa</li>
                                     <li>Sastojci: Nudle, Đumbir, Mladi Luk, Mungo Pasulj, Tofu Sir, Kukuruz Secerac, Jaje</li>
                                     <li>Kolicina: 400g</li>
-                                    <li><button type="button">Dodaj u korpu</button></li>
+                                    <li><button type="button" onclick="dodajUKorpu()">Dodaj u korpu</button></li>
                                 </ul>
                             </th>
                         </tr>
@@ -94,7 +95,7 @@
                         </th>
                         <tr>
                             <th>
-                                <img src = "slike/soupe_miso.jpg" width="200" height = "150">
+                                <img src = "../slike/soupe_miso.jpg" width="200" height = "150">
                             </th>
                             <th align = "left">
                                 <ul>
@@ -103,7 +104,7 @@
                                     <li>Vrsta Jela: Supa</li>
                                     <li>Sastojci: Miso Pasta, Praziluk, Morske Alge, Tofu, Soja Sos, Sesamovo Ulje</li>
                                     <li>Kolicina: 295g</li>
-                                    <li><button type="button">Dodaj u korpu</button></li>
+                                    <li><button type="button" onclick="dodajUKorpu()">Dodaj u korpu</button></li>
                                 </ul>
                             </th>
                         </tr>
@@ -112,7 +113,7 @@
                         </th>
                         <tr>
                             <th>
-                                <img src = "slike/leafy_salad.jpg" width="200" height = "150">
+                                <img src = "../slike/leafy_salad.jpg" width="200" height = "150">
                             </th>
                             <th align = "left">
                                 <ul>
@@ -121,7 +122,7 @@
                                     <li>Vrsta Jela: Salata</li>
                                     <li>Sastojci: Mesana Zelena Salata, Ceri Paradajz, Krastavac Sa Slatki Prelivom</li>
                                     <li>Kolicina: 350g</li>
-                                    <li><button type="button">Dodaj u korpu</button></li>
+                                    <li><button type="button" onclick="dodajUKorpu()">Dodaj u korpu</button></li>
                                 </ul>
                             </th>
                         </tr>
@@ -153,7 +154,7 @@
                     <input type="text" name="kom_tekst_polje" size="200">
                 </th>
                 <th align="left">
-                    <button type="button">Postavi</button>
+                    <button type="button" onclick="postaviKom()">Postavi</button>
                 </th>
             </tr>
             <table border="0px" width = "100%">
@@ -165,7 +166,7 @@
                         <table>
                             <tr>
                                 <th width = "5%" align="left">
-                                    <img src = "slike/user_logo.png" width="40" height = "40">
+                                    <img src = "../slike/user_logo.png" width="40" height = "40">
                                 </th>
                                 <th align="left">
                                     <h5>Pera Peric</h5>
@@ -183,7 +184,7 @@
                             </tr>
                             <tr>
                                 <th width = "5%" align="left">
-                                    <img src = "slike/user_logo.png" width="40" height = "40">
+                                    <img src = "../slike/user_logo.png" width="40" height = "40">
                                 </th>
                                 <th align="left">
                                     <h5>Jovan Nikolic</h5>
