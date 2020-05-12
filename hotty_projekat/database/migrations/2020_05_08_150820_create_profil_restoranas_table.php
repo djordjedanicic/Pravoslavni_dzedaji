@@ -15,14 +15,16 @@ class CreateProfilRestoranasTable extends Migration
     {
         Schema::create('profil_restoranas', function (Blueprint $table) {
             $table->id();
+            $table->string('naziv');
             $table->unsignedBigInteger('restoran_id');
-            $table->string('telefon');
-            $table->string('lokacija');
-            $table->string('tip');
-            $table->time('vreme_od');
-            $table->time('vreme_do');
-            $table->string('slika');
-            $table->float('ocena');
+            $table->string('telefon')->nullable();
+            $table->string('lokacija')->nullable();
+            $table->string('opstina')->nullable();
+            $table->string('tip')->nullable();
+            $table->time('vreme_od')->nullable();
+            $table->time('vreme_do')->nullable();
+            $table->string('slika')->nullable();
+            $table->float('ocena')->nullable();
             $table->text('opis')->nullable();
             $table->timestamps();
 

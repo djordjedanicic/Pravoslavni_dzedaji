@@ -13,12 +13,12 @@ class CreateRestoransTable extends Migration
      */
     public function up()
     {
-        Schema::create('restoran', function (Blueprint $table) {
+        Schema::create('restorans', function (Blueprint $table) {
             $table->id();
             $table->string('naziv');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('sifra');
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateRestoransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('restoran');
+        Schema::dropIfExists('restorans');
     }
 }

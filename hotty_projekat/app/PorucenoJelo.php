@@ -13,6 +13,6 @@ class PorucenoJelo extends Model
 
     public function jelo()
     {
-        return $this->belongsTo(Jelo::class);
+        return $this->hasOne(Jelo::class);
     }
 }

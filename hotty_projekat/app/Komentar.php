@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Komentar extends Model
 {
-    public function profil_restorana()
+    public function restoran()
     {
-        return $this->belongsTo(ProfilRestorana::class);
+        return $this->belongsTo(Restoran::class);
     }
 
     public function korisnik()

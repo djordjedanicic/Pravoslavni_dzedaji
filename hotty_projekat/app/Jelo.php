@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jelo extends Model
 {
-    public function profil_restorana()
+    protected $guarded = [];
+
+    public function restoran()
     {
-        return $this->belongsTo(ProfilRestorana::class);
+        return $this->belongsTo(Restoran::class);
     }
 
     public function poruceno_jelo()
     {
-        return $this->hasMany(PorucenoJelo::class);
+        return $this->belongsToMany(PorucenoJelo::class);
     }
 }

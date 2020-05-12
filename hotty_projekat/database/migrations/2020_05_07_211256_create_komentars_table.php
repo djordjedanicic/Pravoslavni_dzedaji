@@ -21,8 +21,12 @@ class CreateKomentarsTable extends Migration
             $table->timestamps();
 
             $table->index('restoran_id');
-            $table->index('korisnik_id');
         });
+
+        //Schema::table('komentar', function($table){
+        //    $table->foreign('restoran_id')->references('id')->on('restorans')->onDelete('cascade');
+        //    $table->foreign('korisnik_id')->references('id')->on('korisnik')->onDelete('cascade');
+        //});
     }
 
     /**
@@ -32,6 +36,8 @@ class CreateKomentarsTable extends Migration
      */
     public function down()
     {
+        //Schema::dropForeign('restoran_id');
+        //Schema::dropForeign('korisnik_id');
         Schema::dropIfExists('komentar');
     }
 }

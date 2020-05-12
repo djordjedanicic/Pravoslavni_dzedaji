@@ -13,7 +13,7 @@ class CreateJelosTable extends Migration
      */
     public function up()
     {
-        Schema::create('jelo', function (Blueprint $table) {
+        Schema::create('jelos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('restoran_id');
             $table->string('naziv');
@@ -35,6 +35,6 @@ class CreateJelosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jelo');
+        Schema::dropIfExists('jelos');
     }
 }

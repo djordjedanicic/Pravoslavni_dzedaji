@@ -46,6 +46,11 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'restoran' => [
+            'driver' => 'session',
+            'provider' => 'restorans',
+        ],
     ],
 
     /*
@@ -70,7 +75,10 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
+        'restorans' => [
+            'driver' => 'eloquent',
+            'model' => App\Restoran::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -99,6 +107,14 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        
+        'restorans' => [
+            'provider' => 'restorans',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
     ],
 
     /*
